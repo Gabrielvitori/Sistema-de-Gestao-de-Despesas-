@@ -10,7 +10,7 @@
 
 Este projeto nasceu da necessidade pessoal de rastrear gastos mensais de forma categorizada. Diferente de planilhas manuais, o sistema oferece uma interface CLI (Command Line Interface) interativa que persiste os dados em um banco relacional.
 
-O foco técnico foi implementar uma arquitetura **MVC com DAO (Data Access Object)** manualmente, sem o uso de frameworks ORM (como Hibernate), para demonstrar domínio sobre a manipulação direta de dados e conexões JDBC.
+O foco técnico foi implementar uma arquitetura **MVC com DAO** manualmente, sem o uso de frameworks ORM (como Hibernate), para demonstrar domínio sobre a manipulação direta de dados e conexões JDBC.
 
 ## ⚙️ Funcionalidades
 
