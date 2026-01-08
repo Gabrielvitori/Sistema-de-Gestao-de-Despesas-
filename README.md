@@ -15,9 +15,9 @@ O foco técnico foi implementar uma arquitetura **MVC com DAO** manualmente, sem
 ## ⚙️ Funcionalidades
 
 - [x] **Cadastro de Despesas:** Associação de gastos a categorias pré-definidas (Alimentação, Lazer, Transporte, etc).
-- [x] **Extrato Detalhado:** Listagem de gastos formatada com padrão brasileiro de moeda (R$) e data (dd/MM/yyyy).
-- [x] **Relatórios Inteligentes:** Utilização de `GROUP BY` no SQL para somar gastos agrupados por categoria.
-- [x] **Gestão de Histórico:** Opção segura para limpar/zerar o banco de dados (`TRUNCATE`).
+- [x] **Extrato Detalhado:** Listagem de gastos formatada com padrão brasileiro de moeda e data.
+- [x] **Relatórios Inteligentes:** Utilização de SQL para somar gastos agrupados por categoria.
+- [x] **Gestão de Histórico:** Opção segura para limpar/zerar o banco de dados.
 - [x] **Persistência de Dados:** Conexão robusta com MySQL 8.0+.
 
 ## 🛠 Tecnologias Utilizadas
