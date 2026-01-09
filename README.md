@@ -46,3 +46,5 @@ CREATE TABLE despesas (
     categoria_id INT,
     FOREIGN KEY (categoria_id) REFERENCES categorias(id)
 );
+```
+Desenvolvido por **Gabriel Vitório**
