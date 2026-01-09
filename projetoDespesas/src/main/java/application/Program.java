@@ -26,27 +26,27 @@ public class Program {
 
         int opcao = 0;
 
-        while (opcao != 5) {
+        while(opcao != 5){
             System.out.println("\n=== CONTROLE DE DESPESAS ===");
             System.out.println("1 - Nova Despesa");
             System.out.println("2 - Ver Extrato");
-            System.out.println("3 - Relatório por Categoria"); // Opção Nova
+            System.out.println("3 - Relatório por Categoria"); 
             System.out.println("4 - Excluir Histórico");
             System.out.println("5 - Sair");
             System.out.print("Escolha uma opção: ");
 
-            if (sc.hasNextInt()) {
+            if(sc.hasNextInt()){
                 opcao = sc.nextInt();
                 sc.nextLine();
-            } else {
+            }else{
                 sc.next();
                 continue;
             }
 
-            if (opcao == 1) {
+            if(opcao == 1){
                 System.out.println("\n--- NOVA DESPESA ---");
                 List<Categoria> cats = categoriaDAO.listAll();
-                for (Categoria c : cats) {
+                for(Categoria c : cats){
                     System.out.println(c.getId() + " - " + c.getName());
                 }
                 System.out.print("ID da Categoria: ");
@@ -75,12 +75,12 @@ public class Program {
 
                 System.out.println("Despesa cadastrada!");
 
-            } else if (opcao == 2) {
+            }else if(opcao == 2){
                 System.out.println("\n--- EXTRATO DE GASTOS ---");
                 List<Despesas> despesas = despesaDAO.findAll();
                 double total = 0.0;
 
-                for (Despesas d : despesas) {
+                for(Despesas d : despesas){
                     System.out.println(
                             d.getData().format(fmt) + " | " +
                                     d.getDescricao() + " | " +
@@ -91,21 +91,21 @@ public class Program {
                 System.out.println("---------------------------------");
                 System.out.println("TOTAL GERAL: " + dinheiro.format(total));
 
-            } else if (opcao == 3) {
+            }else if(opcao == 3){
                 System.out.println("\n--- GASTOS POR CATEGORIA ---");
                 List<CategoriaSoma> listaRelatorio = despesaDAO.buscarTotalPorCategoria();
 
-                for (CategoriaSoma item : listaRelatorio) {
+                for(CategoriaSoma item : listaRelatorio){
                     System.out.println(
                             item.getNomeCategoria() + ": " +
                                     dinheiro.format(item.getTotalGasto())
                     );
                 }
 
-            } else if (opcao == 4) {
+            }else if(opcao == 4){
                 System.out.println("\n!!! PERIGO !!! Apagar tudo? (s/n): ");
                 char confirmacao = sc.next().charAt(0);
-                if (confirmacao == 's' || confirmacao == 'S') {
+                if(confirmacao == 's' || confirmacao == 'S'){
                     despesaDAO.limparTudo();
                     System.out.println("Histórico apagado.");
                 }
